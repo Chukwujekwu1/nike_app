@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Shoe {
   final String name;
   final String price;

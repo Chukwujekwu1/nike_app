@@ -22,18 +22,18 @@ class IntroPage extends StatelessWidget {
                   height: 240,
                 ),
               ),
-              SizedBox(
+             const SizedBox(
                 height: 48,
               ),
-              Text(
+             const Text(
                 'Just Do It',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 ),
               ),
-              SizedBox(height: 24),
-              Text(
+            const  SizedBox(height: 24),
+             const Text(
                 'Brand new sneakers and custom kicks made with premium quality',
                 style: TextStyle(
                   fontSize: 16,
@@ -41,7 +41,7 @@ class IntroPage extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+             const SizedBox(
                 height: 48,
               ),
               GestureDetector(
@@ -49,7 +49,7 @@ class IntroPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => HomePage(),
+                      builder: (context) =>const HomePage(),
                     ),
                   );
                 },
@@ -58,8 +58,8 @@ class IntroPage extends StatelessWidget {
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  padding: EdgeInsets.all(25),
-                  child: Center(
+                  padding:const EdgeInsets.all(25),
+                  child:const Center(
                     child: Text(
                       'Shop Now',
                       style: TextStyle(

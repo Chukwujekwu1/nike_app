@@ -40,9 +40,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         leading: Builder(builder: (context) {
           return IconButton(
-            icon: Padding(
-              padding: const EdgeInsets.only(left: 12),
-              child: const Icon(
+            icon:const Padding(
+              padding:  EdgeInsets.only(left: 12),
+              child:  Icon(
                 Icons.menu,
                 color: Colors.black,
               ),
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25),
+              padding:const EdgeInsets.symmetric(horizontal: 25),
               child: Divider(
                 color: Colors.grey[800],
               ),
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            Spacer(),
+           const Spacer(),
           const  Padding(
               padding: EdgeInsets.only(bottom: 25),
               child:  ListTile(
