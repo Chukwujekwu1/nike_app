@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nike_app/components/bottom_nav_bar.dart';
+import 'package:nike_app/pages/cart_page.dart';
+import 'package:nike_app/pages/shop_page.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -14,7 +16,7 @@ class _HomePageState extends State<HomePage> {
 
   // this methos will update our selected index
   // when the user taps on the bottom bar
-  navigateBottomBar(int index) {
+  void navigateBottomBar(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -35,6 +37,38 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: MyBottomNavBar(
         onTabChange: (index) => navigateBottomBar(index),
       ),
+      appBar: AppBar(
+        leading: Builder(builder: (context) {
+          return IconButton(
+            icon:const Icon(
+              Icons.menu,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+          );
+        }),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.grey[700],
+        child: Column(
+          children: [
+            //logo
+            DrawerHeader(
+              child: Image.asset(
+                'lib/images/nikeLogo.jpg',
+                fit: BoxFit.cover,
+                color: Colors.white,
+                
+              ),
+            ),
+          ],
+        ),
+      ),
+      body: _pages[_selectedIndex],
     );
   }
 }
